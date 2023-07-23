@@ -16,7 +16,7 @@ const ImgCarousel = ({ img, imgMobile, slideDuration, titleOne, titletwo }) => {
   }, [images.length, slideDuration]);
 
   return (
-    <div className="carousel">
+    <section className="carousel">
       <div className="container-carousel">
         <div
           style={{
@@ -49,7 +49,7 @@ const ImgCarousel = ({ img, imgMobile, slideDuration, titleOne, titletwo }) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

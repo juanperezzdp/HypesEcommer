@@ -5,7 +5,7 @@ import "./Footer.scss";
 
 function Footer() {
   return (
-    <div className="container-footer">
+    <section className="container-footer">
       <div className="logo-social">
         <h1>Logo</h1>
         <div className="container-social-icon">
@@ -45,7 +45,7 @@ function Footer() {
         <Link to="/camas">Camas</Link>
         <Link to="/sofa">Sofas</Link>
       </div>
-    </div>
+    </section>
   );
 }
 

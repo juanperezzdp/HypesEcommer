@@ -1,0 +1,39 @@
+.container-experience{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10rem;
+    background-color: rgb(240, 240, 240);
+
+    .experience{
+        display: flex;
+        justify-content: center;
+
+        .experience-icon{
+            font-size: 2rem;
+            color: rgb(12, 116, 252);
+            margin: 0 0.5rem;
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .container-experience{
+        
+        .experience{
+            flex-direction: column;
+            align-items: center;
+
+            
+            .experience-icon{
+                margin-bottom: 0.5rem;
+            }
+
+            h2{
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}

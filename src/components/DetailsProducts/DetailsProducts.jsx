@@ -29,7 +29,7 @@ function DetailsProducts() {
       <>
         <Navbar />
 
-        <div className="container-datails">
+        <section className="container-datails">
           <div className="container-img-details">
             <div className="container-btn-product-image">
               <img
@@ -127,7 +127,7 @@ function DetailsProducts() {
               <p>{detailData.description}</p>
             </div>
           </div>
-        </div>
+        </section>
       </>
     </>
   );

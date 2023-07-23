@@ -11,6 +11,7 @@ import ImgMobile4 from "../../img/img responsive/sala.png";
 import Products from "../../components/Products/Products";
 import Footer from "../../components/Footer/Footer";
 import Offer from "../../components/Offer/Offer";
+import Experience from "../../components/Experience/Experience";
 
 function IndexHome() {
   const img = [Img1, Img2, Img3, Img4];
@@ -31,6 +32,7 @@ function IndexHome() {
       />
       <Offer />
       <Products props={"sofa"} />
+      <Experience />
       <Footer />
     </div>
   );

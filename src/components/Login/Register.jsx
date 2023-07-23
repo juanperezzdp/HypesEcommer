@@ -38,31 +38,29 @@ function Register({ setHidden }) {
   };
 
   return (
-    <div>
-      <form className="form-login" onSubmit={handleSubmit}>
-        {error && <Alert message={error} />}
-        <AiOutlineClose className="x" onClick={() => setHidden(true)} />
-        <h1>¡Registrate!</h1>
-        <p>
-          Ingresa tus email y una contraseña para que conozca todos nuestros
-          productos
-        </p>
-        <input
-          onChange={handleChange}
-          type="email"
-          name="email"
-          placeholder="tuemail@company.com"
-        />
+    <form className="form-login" onSubmit={handleSubmit}>
+      {error && <Alert message={error} />}
+      <AiOutlineClose className="x" onClick={() => setHidden(true)} />
+      <h1>¡Registrate!</h1>
+      <p>
+        Ingresa tus email y una contraseña para que conozca todos nuestros
+        productos
+      </p>
+      <input
+        onChange={handleChange}
+        type="email"
+        name="email"
+        placeholder="tuemail@company.com"
+      />
 
-        <input
-          onChange={handleChange}
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-        />
-        <button type="submit">Regístrase</button>
-      </form>
-    </div>
+      <input
+        onChange={handleChange}
+        type="password"
+        name="password"
+        placeholder="Contraseña"
+      />
+      <button type="submit">Regístrase</button>
+    </form>
   );
 }
 

@@ -71,45 +71,43 @@ function Login({ setHidden }) {
   };
 
   return (
-    <div>
-      <form className="form-login" onSubmit={handleSubmit}>
-        {error && <Alert message={error} />}
-        <h1>¡Hola amigo!</h1>
-        <p>Ingresa tus datos personales y conoce tus muebles ideales</p>
-        <input
-          onChange={handleChange}
-          type="email"
-          name="email"
-          placeholder="tuemail@company.com"
-        />
-        <input
-          onChange={handleChange}
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-        />
-        <div>
-          <button>Iniciar sesión</button>
-          <div className="container-register">
-            <Link to="#!" onClick={handleResetPassword}>
-              Recuperar contraseña
-            </Link>
-            <br />
-            <button
-              onClick={() => {
-                setHidden(false);
-              }}
-            >
-              Regístrate
-            </button>
-          </div>
+    <form className="form-login" onSubmit={handleSubmit}>
+      {error && <Alert message={error} />}
+      <h1>¡Hola amigo!</h1>
+      <p>Ingresa tus datos personales y conoce tus muebles ideales</p>
+      <input
+        onChange={handleChange}
+        type="email"
+        name="email"
+        placeholder="tuemail@company.com"
+      />
+      <input
+        onChange={handleChange}
+        type="password"
+        name="password"
+        placeholder="Contraseña"
+      />
+      <div>
+        <button>Iniciar sesión</button>
+        <div className="container-register">
+          <Link to="#!" onClick={handleResetPassword}>
+            Recuperar contraseña
+          </Link>
+          <br />
+          <button
+            onClick={() => {
+              setHidden(false);
+            }}
+          >
+            Regístrate
+          </button>
         </div>
-        <div>
-          <FaFacebook className="icons" onClick={handleFacebook} />
-          <ImGooglePlus3 className="icons" onClick={handleGoogle} />
-        </div>
-      </form>
-    </div>
+      </div>
+      <div>
+        <FaFacebook className="icons" onClick={handleFacebook} />
+        <ImGooglePlus3 className="icons" onClick={handleGoogle} />
+      </div>
+    </form>
   );
 }
 
