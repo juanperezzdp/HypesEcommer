@@ -1,0 +1,332 @@
+
+    
+    .nav-scrolled-white{
+        background-color: rgb(46, 139, 125);
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+        position: fixed;
+        z-index: 9999;
+
+        .menu{
+           display: none;
+        }
+
+        .menu-modal{
+            display: flex;
+
+            .x-nav{
+                display: none;
+            }
+
+            .btn-white{
+                display: flex;
+                align-items: center;
+                height: 4rem;
+                color: white;
+                margin-right: 0.2rem;
+                padding: 0 1.5rem;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 1.2rem;
+
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.089);
+                    
+                }
+            }
+
+        }
+
+      }
+
+      
+      .nav-scrolled {
+        background-color: rgba(0, 0, 0, 0.155);
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+        position: fixed;
+        z-index: 9999;
+
+        .menu{
+            display: none;
+        }
+        
+
+        .menu-modal{
+            display: flex;
+
+            .x-nav{
+                display: none;
+            }
+
+            .btn-transparent{
+                display: flex;
+                align-items: center;
+                height: 4rem;
+                color: white;
+                margin-right: 0.2rem;
+                padding: 0 1.5rem;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 1.2rem;
+    
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.314);
+                }
+        }
+
+        }
+      }
+    //Style modal user
+    .user{
+        width: 3rem;
+        border-radius: 50%;
+        background-color: white;
+        cursor: pointer;
+        
+
+        &:hover{
+          width: 3.3rem;
+        }
+    }
+
+    .container-modal{
+        position: fixed;
+        top: 1rem; 
+        right: 1rem; 
+        width: 15rem;
+        height: 15rem;
+        gap: 1rem;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        border-radius: 0.5rem;
+        border: 2px solid rgba(121, 121, 121, 0.426);
+
+        .x-modal{
+        position: absolute;
+        top: 0.5rem; 
+        right: 0.5rem;
+        font-size: 1.2rem; 
+        cursor: pointer;
+        
+        }
+
+        .user-modal{
+            width: 4rem;
+            border-radius: 50%;
+            margin: 1rem 0;
+
+        }
+
+        .user-info{
+            width: 14rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+
+            .user-email{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .btn-modal{
+            height: 2rem;
+                width: 8rem;
+                border: none;
+                background-color: rgb(46, 139, 125);
+                border-radius: 2rem;
+                color: white;
+                font-size: 1rem;
+                cursor: pointer;
+
+                &:hover{
+                    border: 2px solid rgb(46, 139, 125);
+                    background-color: white;
+                    color:rgb(46, 139, 125);
+                }
+
+        }
+        
+    }
+
+
+    @media (max-width: 768px) {
+        .nav-scrolled-white{
+            
+            .menu{
+               display: block;
+               font-size: 2.5rem;
+               color: white;
+               cursor: pointer;
+               &:hover{
+                color: rgb(21, 21, 21);
+               }
+            }
+            .menu-modal{
+                display: none;
+            }
+
+            .show{
+                width: 10rem;
+                height: 15rem;
+                margin-top: 13rem;
+                position: fixed;
+                background-color: #2e5e8b;
+                margin-left: -2rem;
+                border-radius: 0  1rem 1rem 0;
+                overflow: hidden;
+                animation-name: navbar;
+                animation-duration: 1s;
+                animation-fill-mode: both;
+
+                @keyframes navbar {
+                    0% {
+                      
+                      transform: translateX(-100%);
+                    }
+                    100% {
+                      
+                      transform: translateX(0);
+                    }
+                  }
+
+                .x-nav{
+                    display: flex;
+                    margin-left: auto;
+                    margin-top: 0.5rem;
+                    margin-right: 0.5rem;
+                    font-size: 1.2rem; 
+                    cursor: pointer;
+                    width: 2rem;
+                    color: white;
+
+                    &:hover{
+                        color: black;
+                    }
+                }
+                .btn-white{
+                    display: flex;
+                align-items: center;
+                height: 4rem;
+                color: white;
+                margin-right: 0.2rem;
+                padding: 0 1.5rem;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 1.2rem;
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.142);
+                }
+                }
+            }
+          }
+
+          .nav-scrolled {
+            
+            .menu{
+                display: block;
+                font-size: 2.5rem;
+                color: white;
+                cursor: pointer;
+                &:hover{
+                    color: rgb(21, 21, 21);
+                   }
+            }
+            .menu-modal{
+                display: none;
+            }
+
+                .show{
+                    width: 10rem;
+                    height: 15rem;
+                    margin-top: 13rem;
+                    position: fixed;
+                    background-color: #2e5e8b;
+                    margin-left: -2rem;
+                    border-radius: 0  1rem 1rem 0;
+                    overflow: hidden;
+                    animation-name: navbar;
+                    animation-duration: 1s;
+                    animation-fill-mode: both;
+    
+                    @keyframes navbar {
+                        0% {
+                          
+                          transform: translateX(-100%);
+                        }
+                        100% {
+                          
+                          transform: translateX(0);
+                        }
+                      }
+    
+                    .x-nav{
+                        display: flex;
+                        margin-left: auto;
+                        margin-top: 0.5rem;
+                        margin-right: 0.5rem;
+                        font-size: 1.2rem; 
+                        cursor: pointer;
+                        width: 2rem;
+                        color: white;
+    
+                        &:hover{
+                            color: black;
+                        }
+                    }
+                    .btn-transparent{
+                        display: flex;
+                    align-items: center;
+                    height: 4rem;
+                    color: white;
+                    margin-right: 0.2rem;
+                    padding: 0 1.5rem;
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.142);
+                    }
+                    }
+                }
+
+
+
+
+
+
+
+
+
+
+    
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        }
