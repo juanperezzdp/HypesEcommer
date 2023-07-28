@@ -15,7 +15,10 @@ function IconCart() {
     <div className="container-btn-pt">
       <div
         style={{
-          backgroundColor: count >= 1 ? "rgb(46, 139, 125)" : "#000000a6",
+          background:
+            count >= 1
+              ? "linear-gradient(220.55deg, Blue 0%, Green 100%)"
+              : "#000000a6",
         }}
         className="container-btn-cart"
         onClick={handleNavigateShopping}

@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import ImgCarousel from "../../components/ImgCarousel/ImgCarousel";
 import Img1 from "../../img/Salahome.jpg";
@@ -12,13 +13,15 @@ import Products from "../../components/Products/Products";
 import Footer from "../../components/Footer/Footer";
 import Offer from "../../components/Offer/Offer";
 import Experience from "../../components/Experience/Experience";
+import "./Home.scss";
 
-function IndexHome() {
+function Home() {
   const img = [Img1, Img2, Img3, Img4];
   const imgMobile = [ImgMobile1, ImgMobile2, ImgMobile3, ImgMobile4];
   const slideDuration = 5000;
   const titleOne = "Nueva llegada";
   const titletwo = "sofá confort de una nueva colección";
+  const numberOfProductsToShow = 8;
 
   return (
     <div>
@@ -31,11 +34,26 @@ function IndexHome() {
         titletwo={titletwo}
       />
       <Offer />
-      <Products props={"sofa"} />
+      <div className="container-title-home">
+        <h1 className="title-home">Camas</h1>
+      </div>
+      <Products props={"camas"} productCount={numberOfProductsToShow} />
+      <div className="container-title-home">
+        <h1 className="title-home">Sofas</h1>
+      </div>
+      <Products props={"sofa"} productCount={numberOfProductsToShow} />
+      <div className="container-title-home">
+        <h1 className="title-home">Juego de comedor</h1>
+      </div>
+      <Products
+        props={"juego de comedor"}
+        productCount={numberOfProductsToShow}
+      />
+
       <Experience />
       <Footer />
     </div>
   );
 }
 
-export default IndexHome;
+export default Home;

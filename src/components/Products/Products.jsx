@@ -1,16 +1,12 @@
-import { useEffect, useReducer, useState, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase.config/FireBase";
 import "./CartStyle.scss";
-import {
-  CartProvider,
-  cartReducer,
-  CartContext,
-} from "../../context/cartContext";
+import { CartProvider, CartContext } from "../../context/cartContext";
 import { useNavigate } from "react-router-dom";
 import Loading from "../Loading/Loading";
 
-function Products({ props }) {
+function Products({ props, productCount }) {
   const { cartItems, dispatch, count, setCount } = useContext(CartContext);
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -53,7 +49,7 @@ function Products({ props }) {
         <>
           <CartProvider>
             <div className="container-wrap">
-              {products.map((product) => {
+              {products.slice(0, productCount).map((product) => {
                 const discount =
                   (parseFloat(product.price) * parseFloat(product.discount)) /
                   100;

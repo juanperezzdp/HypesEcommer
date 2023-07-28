@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import "../../components/Products/CartStyle.scss";
 import IconCart from "../IconCart/IconCart";
 import { CartContext } from "../../context/cartContext";
@@ -8,6 +8,13 @@ import VoidCart from "../../pages/VoidCart/VoidCart";
 
 function ShoppingCart() {
   const { cartItems, dispatch, count, setCount } = useContext(CartContext);
+  const [totalValueInUSD, setTotalValueInUSD] = useState("0.00");
+
+  const convertToUSD = (valueInCOP) => {
+    const exchangeRateUSD = 3949.9742;
+    const convertedValue = (valueInCOP / exchangeRateUSD).toFixed(2);
+    setTotalValueInUSD(convertedValue);
+  };
 
   const removeFromCart = (productId) => {
     const index = cartItems.findIndex((product) => product.id === productId);
@@ -35,6 +42,15 @@ function ShoppingCart() {
       setCount(Number(savedCount));
     }
   }, [dispatch, setCount]);
+
+  useEffect(() => {
+    const totalValueInCOP = getUniqueProducts().reduce(
+      (acc, product) => acc + getDiscountedPrice(product),
+      0
+    );
+
+    convertToUSD(totalValueInCOP);
+  }, [cartItems]);
 
   const getUniqueProducts = () => {
     const uniqueProducts = [];
@@ -116,7 +132,7 @@ function ShoppingCart() {
             </div>
           ))}
 
-          <Paypal totalValue={"10.00"} invoice={"sofa"} />
+          <Paypal totalValue={totalValueInUSD} invoice={"sofa"} />
         </div>
       ) : (
         <VoidCart />
