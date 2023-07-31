@@ -1,4 +1,4 @@
-import { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import "../../components/Products/CartStyle.scss";
 import IconCart from "../IconCart/IconCart";
 import { CartContext } from "../../context/cartContext";
@@ -115,7 +115,7 @@ function ShoppingCart() {
                       className="btn-add-more"
                       onClick={() => addToCart(product)}
                     >
-                      Añadir mas
+                      Añadir más
                     </button>
                     <button
                       onClick={() => {
