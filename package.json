@@ -10,14 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@paypal/react-paypal-js": "^8.1.0",
+    "@mercadopago/sdk-react": "^0.0.13",
     "firebase": "^10.1.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
+    "react-stripe-checkout": "^2.6.3",
     "sass": "^1.64.1",
+    "stripe": "^12.16.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {

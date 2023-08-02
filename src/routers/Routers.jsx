@@ -4,10 +4,11 @@ import { CartProvider } from "../context/cartContext";
 import Home from "../pages/Home/Home";
 import CreateProducts from "../pages/CreateProducts/CreateProducts";
 import LoginPage from "../pages/LoginPage/LoginPage";
-import ShoppingCart from "../components/ShoppingCart/ShoppingCart";
 import Camas from "../pages/Camas/Camas";
 import DetailsProducts from "../components/DetailsProducts/DetailsProducts";
 import Sofa from "../pages/Sofa/Sofa";
+import Pay from "../pages/Pay/Pay";
+import JuegosDeSala from "../pages/Juegos de sala/JuegosDeSala";
 
 function Routers() {
   return (
@@ -17,13 +18,14 @@ function Routers() {
           <Route path="/" element={<Home />} />
           <Route path="/camas" element={<Camas />} />
           <Route path="/sofa" element={<Sofa />} />
+          <Route path="/juegosdesala" element={<JuegosDeSala />} />
           <Route path="/loginpage" element={<LoginPage />} />
           <Route path="/createproducts" element={<CreateProducts />} />
           <Route
-            path="/shoppingcart"
+            path="/pay"
             element={
               <ProtectedRoute>
-                <ShoppingCart />
+                <Pay />
               </ProtectedRoute>
             }
           />

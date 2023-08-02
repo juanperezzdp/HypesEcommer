@@ -1,0 +1,99 @@
+.container-body-pay{
+	background: linear-gradient(-80deg, #00fafa, #02a034, #0c00f8, #ff1f1f);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 80vh;
+    width: 25rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.31);
+    position: fixed;
+    
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .logo-stripe{
+        width: 20rem;
+    }
+
+    p{
+        color: white;
+        font-weight: 800;
+        
+    }
+
+
+
+    
+
+    .btn-pay{
+        width: 21rem;
+        height: 3rem;
+        font-size: 1.3rem;
+        border-radius: 2rem;  
+        border: 2px solid rgb(0, 113, 148);
+        margin: 1rem;
+        color: rgb(0, 113, 148);
+        cursor: pointer;
+        font-weight: 800;
+
+        &:hover{
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            
+        }
+    }
+
+    .container-pay-icon{
+        display: flex;
+        align-items: center;
+        width: 20rem;
+        height: 2rem;
+        gap: 1rem;
+
+        .pay-icon{
+            color: white;
+            font-size: 2rem;
+        }
+    }
+}
+
+
+@media (max-width: 700px){
+    .container-body-pay{
+        margin: 0 1rem 2rem 1rem;
+        width: 21rem;
+        position: static; 
+        .logo-stripe{
+            width: 15rem;
+        }
+        p{
+            text-align: justify;
+        }
+
+        .btn-pay{
+            width: 17rem;
+            
+        }
+
+        .container-pay-icon{
+            width: 15rem;
+        }
+    }
+
+}

@@ -69,6 +69,14 @@ function Navbar() {
           >
             Sofa
           </li>
+          <li
+            className={scrolled ? "btn-white" : "btn-transparent"}
+            onClick={() => {
+              navigate("/juegosdesala");
+            }}
+          >
+            Juegos De Sala
+          </li>
         </ul>
 
         <img

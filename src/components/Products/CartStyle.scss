@@ -15,7 +15,8 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        border: 2px solid rgba(121, 121, 121, 0.426);
+        border: 2px solid rgba(0, 104, 61, 0.426);
+        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.31);
        
         
         
@@ -109,10 +110,11 @@
                 }
             }
         }
-
-    
-
 }
 }
 
+
+@media (min-width: 600px){
+
+}
 

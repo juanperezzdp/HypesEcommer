@@ -7,7 +7,6 @@ function Footer() {
   return (
     <section className="container-footer">
       <div className="logo-social">
-        <h1>Logo</h1>
         <div className="container-social-icon">
           <Link
             to="https://www.facebook.com/"

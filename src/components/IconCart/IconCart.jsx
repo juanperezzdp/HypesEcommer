@@ -8,7 +8,7 @@ function IconCart() {
   const navigate = useNavigate();
   const { count } = useContext(CartContext);
   const handleNavigateShopping = () => {
-    navigate("/shoppingcart");
+    navigate("/pay");
   };
 
   return (

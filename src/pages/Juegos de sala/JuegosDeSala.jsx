@@ -2,16 +2,17 @@ import Footer from "../../components/Footer/Footer";
 import ImgCarousel from "../../components/ImgCarousel/ImgCarousel";
 import Navbar from "../../components/Navbar/Navbar";
 import Products from "../../components/Products/Products";
-import Img1 from "../../img/cama-abatible.jpg";
-import Img2 from "../../img/dormitorio-paredes-madera-oscura.jpg";
-import ImgMobile1 from "../../img/img responsive/dormitorio-movil-.jpg";
-import ImgMobile2 from "../../img/img responsive/dormitorio-movil-2.jpg";
+import Img1 from "../../img/juegodesala1.jpg";
+import Img2 from "../../img/juegodesala2.jpg";
+import ImgMobile1 from "../../img/img responsive/1-comedor-estilo-nordico.jpg";
+import ImgMobile2 from "../../img/img responsive/2-comedor.jpg";
 
-function Camas() {
+function JuegosDeSala() {
   const img = [Img1, Img2];
   const imgMobile = [ImgMobile1, ImgMobile2];
   const slideDuration = 5000;
-  const titletwo = "Camas, Base Camas y Cabeceros";
+  const titletwo =
+    "Un juego de comedor acorde al espacio que ocupará en tu casa";
 
   return (
     <>
@@ -22,10 +23,10 @@ function Camas() {
         imgMobile={imgMobile}
         titletwo={titletwo}
       />
-      <Products props={"camas"} />
+      <Products props={"sofa"} />
       <Footer />
     </>
   );
 }
 
-export default Camas;
+export default JuegosDeSala;

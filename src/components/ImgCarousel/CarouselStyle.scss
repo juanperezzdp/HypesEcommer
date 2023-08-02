@@ -14,15 +14,20 @@
 
 
       .container-title{
-        width: 50%;
+        width: 90%;
         background-color: rgba(255, 255, 255, 0.482);
         padding: 1rem 1rem;
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     
     .title-new{
         font-family: 'Great Vibes', cursive;
         margin-bottom: -1rem;
         font-size: 3rem;
+        text-align: center;
         
     }
     
@@ -31,6 +36,7 @@
         font-weight: 600;
         font-size: 4.5rem;
         color: rgb(0, 0, 0);
+        text-align: center;
         }
         }
 
